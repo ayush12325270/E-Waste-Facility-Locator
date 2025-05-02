@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRecycle | E-Waste Facility Videos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .video-thumbnail {
+            transition: all 0.3s ease;
+            aspect-ratio: 16/9;
+        }
+        .video-card:hover .video-thumbnail {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(5, 150, 105, 0.2);
+        }
+        .modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-content {
+            transition: transform 0.3s ease;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body class="font-['Poppins'] bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="Home.php" class="flex items-center gap-2">
+                <i class="fas fa-recycle text-emerald-600 text-2xl"></i>
+                <span class="text-xl font-bold text-emerald-600">EcoRecycle</span>
+            </a>
+            <div class="hidden md:flex gap-8">
+                <a href="Home.php" class="text-gray-600 hover:text-emerald-600">Home</a>
+                <a href="Facility.php" class="text-gray-600 hover:text-emerald-600">Facilities</a>
+                <a href="videos.html" class="text-emerald-600 font-medium">Videos</a>
+                <a href="contact.php" class="text-gray-600 hover:text-emerald-600">Contact</a>
+            </div>
+            <button id="mobileMenuBtn" class="md:hidden text-emerald-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-4 border-t">
+            <a href="Home.php" class="block py-2 text-gray-600">Home</a>
+            <a href="Facility.php" class="block py-2 text-gray-600">Facilities</a>
+            <a href="videos.html" class="block py-2 text-emerald-600">Videos</a>
+            <a href="contact.php" class="block py-2 text-gray-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Video Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-emerald-600 mb-4">E-Waste Facility Operations</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                Learn how India responsibly processes electronic waste through state-of-the-art facilities
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 - E-Waste Recycling Process in India -->
+                <div class="video-card group cursor-pointer" onclick="openModal('What is E-WASTE Pollution_ _ What Causes Electronic Waste_ _ The Dr Binocs Show _ Peekaboo Kidz.mp4')">
+                    <div class="video-thumbnail relative rounded-lg overflow-hidden bg-gray-200">
+                        <img src="th1.png" alt="E-Waste Recycling Process in India" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition">
+                            <div class="w-16 h-16 bg-emerald-500 bg-opacity-80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4 text-gray-800">What is E-WASTE Pollution? | What Causes Electronic Waste?</h3>
+                    <p class="text-gray-500 text-sm mt-1">6:52 min • Full documentary</p>
+                </div>
+
+                <!-- Video 2 - Bengaluru E-Waste Management -->
+                <div class="video-card group cursor-pointer" onclick="openModal('Inside the solution to India waste problem  _ Brut Documentary.mp4')">
+                    <div class="video-thumbnail relative rounded-lg overflow-hidden bg-gray-200">
+                        <img src="th2.png" alt="Bengaluru E-Waste Management" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition">
+                            <div class="w-16 h-16 bg-emerald-500 bg-opacity-80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4 text-gray-800">
+                        Inside the solution to India's waste problem | Brut Documentary</h3>
+                    <p class="text-gray-500 text-sm mt-1">10:00 min • India's facility</p>
+                </div>
+
+                <!-- Video 3 - Gold & Silver Extraction -->
+                <div class="video-card group cursor-pointer" onclick="openModal('Recycling e-waste - Good for business and the environment _ DW Documentary.mp4')">
+                    <div class="video-thumbnail relative rounded-lg overflow-hidden bg-gray-200">
+                        <img src="th3.png" alt="Gold & Silver Extraction" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition">
+                            <div class="w-16 h-16 bg-emerald-500 bg-opacity-80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4 text-gray-800">
+                        Recycling e-waste - Good for business and the environment | DW Documentary</h3>
+                    <p class="text-gray-500 text-sm mt-1">28:18 min • Facility</p>
+                </div>
+
+                <!-- Video 4 - Mumbai Facility Tour -->
+                <!-- <div class="video-card group cursor-pointer" onclick="openModal('https://www.youtube.com/embed/8wD_I4QYuhs')">
+                    <div class="video-thumbnail relative rounded-lg overflow-hidden bg-gray-200">
+                        <img src="th4.png" alt="Mumbai Facility Tour" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition">
+                            <div class="w-16 h-16 bg-emerald-500 bg-opacity-80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4 text-gray-800">Mumbai Facility Tour</h3>
+                    <p class="text-gray-500 text-sm mt-1">4:12 min • 360° walkthrough</p>
+                </div> -->
+
+                <!-- Video 5 - Lithium Battery Recycling -->
+                <!-- <div class="video-card group cursor-pointer" onclick="openModal('https://www.youtube.com/embed/5xY9bTJcdds')">
+                    <div class="video-thumbnail relative rounded-lg overflow-hidden bg-gray-200">
+                        <img src="th5.png" alt="Lithium Battery Recycling" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition">
+                            <div class="w-16 h-16 bg-emerald-500 bg-opacity-80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4 text-gray-800">Lithium Battery Recycling</h3>
+                    <p class="text-gray-500 text-sm mt-1">7:05 min • Chennai facility</p>
+                </div> -->
+
+                <!-- Video 6 - Community Impact Stories -->
+                <!-- <div class="video-card group cursor-pointer" onclick="openModal('https://www.youtube.com/embed/VOUDd6W4vXk')">
+                    <div class="video-thumbnail relative rounded-lg overflow-hidden bg-gray-200">
+                        <img src="" alt="Community Impact Stories" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition">
+                            <div class="w-16 h-16 bg-emerald-500 bg-opacity-80 rounded-full flex items-center justify-center">
+                                <i class="fas fa-play text-white text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold mt-4 text-gray-800">Community Impact Stories</h3>
+                    <p class="text-gray-500 text-sm mt-1">8:22 min • Worker interviews</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 opacity-0 invisible">
+        <div class="modal-content relative w-full max-w-4xl scale-90">
+            <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-emerald-300">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+            <div class="aspect-w-16 aspect-h-9 bg-black">
+                <iframe id="ytVideo" class="w-full h-[500px]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                        <i class="fas fa-recycle"></i> EcoRecycle
+                    </h3>
+                    <p class="mb-4 text-gray-300">Helping India recycle electronics responsibly since 2023.</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="Home.php" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="Facility.php" class="text-gray-300 hover:text-white">Find Centers</a></li>
+                        <li><a href="videos.html" class="text-gray-300 hover:text-white">Videos</a></li>
+                        <li><a href="contact.php" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white">E-Waste Facts</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Recycling Process</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white">Data Security</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <span>456 Green Towers, Bengaluru, KA 560001</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 80 4040 5050</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ecorecycle.in</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400">
+                <p>This initiative supports responsible e-waste management and sustainability.</p>
+                <p class="mt-2">© 2023 EcoRecycle. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Video modal controls
+        function openModal(videoUrl) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('ytVideo');
+            iframe.src = videoUrl + '?autoplay=1&rel=0';
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('ytVideo');
+            iframe.src = '';
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('videoModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('videoModal')) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
