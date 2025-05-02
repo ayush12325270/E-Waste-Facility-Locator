@@ -1,0 +1,115 @@
+{
+    "users": [
+        {
+            "email": "harsh123@gmail.com",
+            "password": "harsh1007",
+            "name": "Harsh",
+            "join_date": "2024-04-26",
+            "visits": 15,
+            "facilities_found": 22,
+            "resources_viewed": 8,
+            "credits": 9.575000000000001,
+            "recycled_devices": [
+                {
+                    "model": "realme 3",
+                    "type": "smartphone",
+                    "credits_earned": 9.575000000000001,
+                    "date": "2025-04-29"
+                }
+            ]
+        },
+        {
+            "email": "satyam@gmail.com",
+            "password": "satyam123",
+            "name": "satyam kumar",
+            "join_date": "2025-04-26",
+            "visits": 10,
+            "facilities_found": 40,
+            "resources_viewed": 0,
+            "credits": 19.150000000000002,
+            "recycled_devices": [
+                {
+                    "model": "realme 3",
+                    "type": "tablet",
+                    "credits_earned": 9.575000000000001,
+                    "date": "2025-04-29"
+                },
+                {
+                    "model": "realme 3",
+                    "type": "tablet",
+                    "credits_earned": 9.575000000000001,
+                    "date": "2025-04-29"
+                }
+            ]
+        },
+        {
+            "email": "ayush123@gmail.com",
+            "password": "ayush123",
+            "name": "ayush jha",
+            "join_date": "2025-04-26",
+            "visits": 0,
+            "facilities_found": 0,
+            "resources_viewed": 0
+        },
+        {
+            "email": "nitin@gmail.com",
+            "password": "nitin123",
+            "name": "nitin sharma",
+            "join_date": "2025-04-26",
+            "visits": 1,
+            "facilities_found": 2,
+            "resources_viewed": 0,
+            "credits": 19.150000000000002,
+            "recycled_devices": [
+                {
+                    "model": "asus vivobook",
+                    "type": "laptop",
+                    "credits_earned": 9.575000000000001,
+                    "date": "2025-04-29"
+                },
+                {
+                    "model": "samsung 9fe+",
+                    "type": "tablet",
+                    "credits_earned": 9.575000000000001,
+                    "date": "2025-04-29"
+                }
+            ]
+        },
+        {
+            "email": "riya123@gmail.com",
+            "password": "riya123",
+            "name": "riya kumari",
+            "join_date": "2025-04-26",
+            "visits": 0,
+            "facilities_found": 0,
+            "resources_viewed": 0
+        },
+        {
+            "email": "amrit123@gmail.com",
+            "password": "amrit123",
+            "name": "amrit",
+            "join_date": "2025-04-26",
+            "visits": 0,
+            "facilities_found": 0,
+            "resources_viewed": 0
+        },
+        {
+            "email": "shreya123@gmail.com",
+            "password": "shreya123",
+            "name": "shreya",
+            "join_date": "2025-04-26",
+            "visits": 1,
+            "facilities_found": 3,
+            "resources_viewed": 0
+        },
+        {
+            "email": "nitin987@gmail.com",
+            "password": "mausam123",
+            "name": "nitin",
+            "join_date": "2025-04-28",
+            "visits": 1,
+            "facilities_found": 2,
+            "resources_viewed": 0
+        }
+    ]
+}
